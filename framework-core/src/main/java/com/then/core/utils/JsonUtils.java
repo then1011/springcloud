@@ -1,4 +1,4 @@
-package com.then.springboot.utils;
+package com.then.core.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

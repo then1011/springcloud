@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.core.MethodParameter;
 
-import com.then.springboot.utils.JsonUtils;
+import com.then.core.utils.JsonUtils;
 
 public abstract class IResolveHandler {
 

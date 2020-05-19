@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.core.MethodParameter;
 import org.springframework.util.StringUtils;
 
+import com.then.core.utils.JsonUtils;
 import com.then.springboot.mvc.request.resolve.IResolveHandler;
-import com.then.springboot.utils.JsonUtils;
 
 public class GetResolveHandler extends IResolveHandler{
 
