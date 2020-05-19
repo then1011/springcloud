@@ -13,9 +13,9 @@ public enum SysCodeEnum {
 	GET_SEQ_FAILURE(3, "数据序列失败"),
 	TIME_OUT(4, "内部请求超时"),
 	REQUEST_ERROR(5, "内部请求错误"), 
-	THREAD_EXECUTE_ERR(6, "执行线程失败"),
-	INIT_ERROR(7, "初始化失败"),
-	EXECUTE_ERROR(8, "系统执行失败"),
+	PARAM_FORMAT_ERROR(6, "参数格式化错误"),
+	VALIDATE_PARAM_ERROR(7, "校验参数失败"),
+	FILE_EXCEED_LIMIT(8, "文件大小超出限制，最大：{0}"),
 	INTERNAL_ERROR(9, "系统内部错误")
 	;
 

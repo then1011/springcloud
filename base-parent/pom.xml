@@ -12,11 +12,13 @@
 
 	<groupId>com.then</groupId>
 	<artifactId>base-parent</artifactId>
-	<version>1.0.0</version>
+	<version>${current_version}</version>
 	<packaging>pom</packaging>
 
 
 	<properties>
+		<current_version>1.0.0</current_version>
+	
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
 
@@ -29,6 +31,12 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
@@ -46,12 +54,12 @@
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-core</artifactId>
-				<version>${project.version}</version>
+				<version>${current_version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-springboot</artifactId>
-				<version>${project.version}</version>
+				<version>${current_version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
