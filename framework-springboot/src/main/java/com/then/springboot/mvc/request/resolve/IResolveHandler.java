@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.core.MethodParameter;
 
 import com.then.core.utils.JsonUtils;
@@ -42,6 +43,11 @@ public abstract class IResolveHandler {
 	}
 
 	private Object formatValue(String value, Class<?> paramFieldClass) {
+
+		if (StringUtils.isBlank(value)) {
+			return value;
+		}
+
 		if (paramFieldClass == Short.class) {
 			return Short.parseShort(value);
 		} else if (paramFieldClass == Integer.class) {

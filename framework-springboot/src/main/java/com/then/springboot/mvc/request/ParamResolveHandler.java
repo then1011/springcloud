@@ -2,6 +2,7 @@ package com.then.springboot.mvc.request;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -13,6 +14,12 @@ import com.then.springboot.mvc.request.resolve.IResolveHandler;
 import com.then.springboot.mvc.request.resolve.ResolveHandlerFactory;
 
 public class ParamResolveHandler implements HandlerMethodArgumentResolver{
+	
+	private ApplicationContext applicationContext;
+
+	public ParamResolveHandler(ApplicationContext applicationContext) {
+		this.applicationContext = applicationContext;
+	}
 
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
@@ -29,7 +36,9 @@ public class ParamResolveHandler implements HandlerMethodArgumentResolver{
 		
 		Object result = resolveHandler.resolve(request, parameter);
 		
-//		ParamValidator.validate(result);
+		ParamValidator.validateSelf(applicationContext.getBean(parameter.getDeclaringClass()), parameter.getMethod(), new Object[] {result});
+		
+		ParamValidator.validate(result);
 		
 		return result;
 	}
