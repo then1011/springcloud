@@ -15,7 +15,7 @@ public class JsonUtils {
 		try {
 			return MAPPER.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
-			throw new SystemException(SysCodeEnum.GET_SEQ_FAILURE, e);
+			throw new SystemException(SysCodeEnum.PARAM_FORMAT_ERROR, e);
 		}
 	}
 
@@ -23,7 +23,7 @@ public class JsonUtils {
 		try {
 			return MAPPER.readValue(str, formatClass);
 		} catch (Exception e) {
-			throw new SystemException(SysCodeEnum.GET_SEQ_FAILURE, e);
+			throw new SystemException(SysCodeEnum.PARAM_FORMAT_ERROR, e);
 		}
 	}
 
@@ -31,7 +31,7 @@ public class JsonUtils {
 		try {
 			return MAPPER.readValue(str, valueTypeRef);
 		} catch (Exception e) {
-			throw new SystemException(SysCodeEnum.GET_SEQ_FAILURE, e);
+			throw new SystemException(SysCodeEnum.PARAM_FORMAT_ERROR, e);
 		}
 	}
 
@@ -39,7 +39,7 @@ public class JsonUtils {
 		try {
 			return MAPPER.readValue(inputStream, formatClass);
 		} catch (Exception e) {
-			throw new SystemException(SysCodeEnum.GET_SEQ_FAILURE, e);
+			throw new SystemException(SysCodeEnum.PARAM_FORMAT_ERROR, e);
 		}
 	}
 
@@ -47,7 +47,7 @@ public class JsonUtils {
 		try {
 			return MAPPER.readValue(inputStream, valueTypeRef);
 		} catch (Exception e) {
-			throw new SystemException(SysCodeEnum.GET_SEQ_FAILURE, e);
+			throw new SystemException(SysCodeEnum.PARAM_FORMAT_ERROR, e);
 		}
 	}
 }
