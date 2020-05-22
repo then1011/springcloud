@@ -79,6 +79,11 @@
 				<artifactId>framework-db</artifactId>
 				<version>${current_version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.then</groupId>
+				<artifactId>framework-redis</artifactId>
+				<version>${current_version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
