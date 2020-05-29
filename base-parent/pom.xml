@@ -12,12 +12,12 @@
 
 	<groupId>com.then</groupId>
 	<artifactId>base-parent</artifactId>
-	<version>${current_version}</version>
+	<version>${current-version}</version>
 	<packaging>pom</packaging>
 
 
 	<properties>
-		<current_version>1.0.0</current_version>
+		<current-version>1.0.0</current-version>
 
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
@@ -67,22 +67,22 @@
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-core</artifactId>
-				<version>${current_version}</version>
+				<version>${current-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-springboot</artifactId>
-				<version>${current_version}</version>
+				<version>${current-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-db</artifactId>
-				<version>${current_version}</version>
+				<version>${current-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.then</groupId>
 				<artifactId>framework-redis</artifactId>
-				<version>${current_version}</version>
+				<version>${current-version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
